@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>&lt;gustavosa.dev&gt;</title>
+	<title>&lt; gustavosa.dev &gt;</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,16 +16,25 @@
 		</header>
 		<nav id="nav">
 			<ul>
-				<li><a href="#sobremim" class="active">Sobre mim</a></li>
-				<li><a href="#primarias">Habilidades primárias</a></li>
-				<li><a href="#secundarias">Habilidades secundárias</a></li>
-                <li><a href="#certificacoes">Certificações</a></li>
-				<li><a href="#projetos">Projetos</a></li>
-				<li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#academica">Formação acadêmica</a></li>
-                <li><a href="#contato">Contato</a></li>
+				<li><a href="#sobremim" class="active" data-lang="aboutMe">Sobre mim</a></li>
+				<li><a href="#primarias" data-lang="primarySkills">Habilidades primárias</a></li>
+				<li><a href="#secundarias" data-lang="secondarySkills">Habilidades secundárias</a></li>
+				<li><a href="#certificacoes" data-lang="certifications">Certificações</a></li>
+				<li><a href="#projetos" data-lang="projects">Projetos</a></li>
+				<li><a href="#experiencia" data-lang="experience">Experiência</a></li>
+				<li><a href="#academica" data-lang="academic">Formação acadêmica</a></li>
+				<li><a href="#contato" data-lang="contact">Contato</a></li>
 			</ul>
-		</nav>
+			<style>
+				.lang{}
+				.lang span{}
+				.lang span a{display: inline-block; padding: 2px; border:1px #fff;}
+			</style>
+			<div class="actions language">
+				<span><a id="lang-en" onclick="changeLanguage('en')" class="button primary icon solid">EN</a></span>
+				<span><a id="lang-pt" onclick="changeLanguage('pt')" class="button primary icon solid">PT-BR</a></span>
+			</div>
+		</nav>		
 		<footer>
 			<ul class="icons">
 				<li><a href="https://www.linkedin.com/in/gsbad/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
@@ -49,32 +58,22 @@
 				</div>
 				<div class="container">
 					<header class="major">
-						<h2> Curriculum Vitae</h2>
-                        <p>Gustavo Souza Gonçalves de Sá</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button primary icon solid fa-download">Baixar pdf</a></li>
-                        </ul>
-						<p><strong class="icon solid fa-hammer">
-                            (  Em construção! Em construção! Em construção!  )
-                        </strong></p>
+						<h2>Curriculum Vitae</h2>
+						<p>Gustavo Souza Gonçalves de Sá</p>
+						<ul class="actions">
+							<li><a href="#" class="button primary icon solid fa-download">Download CV (pt-br)</a></li>
+							<li><a href="#" class="button primary icon solid fa-download">Download CV (en)</a></li>
+						</ul>
+						<p><strong class="icon solid fa-hammer" data-lang="underConstruction">( Em construção! Em construção! Em construção! )</strong></p>
 					</header>
+					<h3 class="icon solid fa-user-circle" data-lang="aboutMe">Sobre mim</h3>
 					<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
-                    <!--<h3>Coisas Que Eu Posso Fazer</h3>
-					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
-					<ul class="feature-icons">
-						<li class="icon solid fa-code">Escrever todo o código</li>
-						<li class="icon solid fa-cubes">Empilhar pequenas caixas</li>
-						<li class="icon solid fa-book">Ler livros e coisas</li>
-						<li class="icon solid fa-coffee">Beber muito café</li>
-						<li class="icon solid fa-bolt">Raio</li>
-						<li class="icon solid fa-users">Técnica de clone das sombras</li>
-					</ul>-->
                 </div>
 			</section>
 			<!-- Habilidades primárias -->
 			<section id="primarias">
 				<div class="container">
-                    <h3 class="icon solid fa-laptop-code"> Habilidades primárias</h3>
+                    <h3 class="icon solid fa-laptop-code" data-lang="primarySkills"> Habilidades primárias</h3>
                         <header>
                             <h4>Heading with a Subtitle</h4>
                             <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
@@ -89,7 +88,7 @@
 			<!-- Habilidades secundárias -->
 			<section id="secundarias">
 				<div class="container">
-                    <h3 class="icon solid fa-cubes"> Habilidades secundárias</h3>
+                    <h3 class="icon solid fa-cubes" data-lang="secondarySkills"> Habilidades secundárias</h3>
                         <header>
                             <h4>Heading with a Subtitle</h4>
                             <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
@@ -104,7 +103,7 @@
             <!-- Certificações -->
 			<section id="certificacoes">
                 <div class="container">
-					<h3 class="icon solid fa-award"> Certificações</h3>
+					<h3 class="icon solid fa-award" data-lang="certifications"> Certificações</h3>
 					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 					<div class="features">
 						<article>
@@ -134,7 +133,7 @@
 			<!-- Projetos -->
 			<section id="projetos">
                 <div class="container">
-					<h3 class="icon solid fa-code"> Alguns projetos</h3>
+					<h3 class="icon solid fa-code" data-lang="projects"> Alguns projetos</h3>
 					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 					<div class="features">
 						<article>
@@ -164,7 +163,7 @@
 		<!-- Experiência profissional -->
 		<section id="experiencia">
 			<div class="container">
-				<h3 class="icon solid fa-suitcase"> Experiência profissional</h3>
+				<h3 class="icon solid fa-suitcase" data-lang="experience"> Experiência profissional</h3>
 
 				<section>
 					<header>
@@ -228,7 +227,7 @@
         <!-- Formação acadêmica -->
 		<section id="academica">
 			<div class="container">
-				<h3 class="icon solid fa-graduation-cap"> Formação acadêmica</h3>
+				<h3 class="icon solid fa-graduation-cap" data-lang="academic"> Formação acadêmica</h3>
 
 				<section>
 					<header>
@@ -246,18 +245,18 @@
         <!-- Contato -->
 			<section id="contato">
 				<div class="container">
-					<h3 class="icon solid fa-address-book"> Entre em Contato</h3>
+					<h3 class="icon solid fa-address-book" data-lang="contact"> Entre em Contato</h3>
 					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 					<form method="post" action="#">
 						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Nome" /></div>
+							<div class="col-6 col-12-xsmall"><input type="text" class="btForm" data-lang="name" name="name" id="name" placeholder="Nome" /></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-							<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Assunto" /></div>
-							<div class="col-12"><textarea name="message" id="message" placeholder="Mensagem" rows="6"></textarea></div>
+							<div class="col-12"><input type="text" name="subject" class="btForm"  data-lang="subject"  id="subject" placeholder="Assunto" /></div>
+							<div class="col-12"><textarea name="message" id="message" data-lang="message" placeholder="Mensagem" rows="6"></textarea></div>
 							<div class="col-12">
 								<ul class="actions">
-									<li><input type="submit" class="primary" value="Enviar Mensagem" /></li>
-									<li><input type="reset" value="Resetar Formulário" /></li>
+									<li><input type="submit" data-lang="send" class="btForm primary" value="Enviar Mensagem" /></li>
+									<li><input type="reset" data-lang="reset" class="btForm" value="Resetar Formulário" /></li>
 								</ul>
 							</div>
 						</div>
@@ -274,6 +273,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/language.js"></script>
 
 </body>
 
