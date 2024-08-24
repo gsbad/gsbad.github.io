@@ -12,7 +12,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Obrigado pela sua mensagem!";
+      status.innerHTML = "<span class='enviada'>Obrigado pela sua mensagem!</span>";
       form.reset();
     } else {
       response.json().then(data => {
