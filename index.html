@@ -58,8 +58,8 @@
 						<h2>Curriculum Vitae</h2>
 						<p>Gustavo Souza Gonçalves de Sá</p>
 						<ul class="actions">
-							<li><a href="curriculo/curriculumVitaePtBr.pdf" class="button primary icon solid fa-download">Download CV (pt-br)</a></li>
-							<li><a href="curriculo/curriculumVitaeEn.pdf" class="button primary icon solid fa-download">Download CV (en)</a></li>
+							<li><a href="curriculo/curriculumVitaePtBr.pdf" target="_blank" class="button primary icon solid fa-download">Download CV (pt-br)</a></li>
+							<li><a href="curriculo/curriculumVitaeEn.pdf" target="_blank" class="button primary icon solid fa-download">Download CV (en)</a></li>
 						</ul>
 						<p><strong class="icon solid fa-hammer" data-lang="underConstruction">( Em construção! Em construção! Em construção! )</strong></p>
 					</header>
@@ -247,18 +247,34 @@
 				<div class="container">
 					<h3 class="icon solid fa-address-book" data-lang="contact"> Entre em Contato</h3>
 					<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-					<form method="post" action="#">
+					<form id="my-form" action="https://formspree.io/f/mnnalzdz" method="POST">
 						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" class="btForm" data-lang="name" name="name" id="name" placeholder="Nome" /></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-							<div class="col-12"><input type="text" name="subject" class="btForm"  data-lang="subject"  id="subject" placeholder="Assunto" /></div>
-							<div class="col-12"><textarea name="message" id="message" data-lang="message" placeholder="Mensagem" rows="6"></textarea></div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" data-lang="send" class="btForm primary" value="Enviar Mensagem" /></li>
-									<li><input type="reset" data-lang="reset" class="btForm" value="Resetar Formulário" /></li>
-								</ul>
-							</div>
+						  <div class="col-6 col-12-xsmall">
+							<label for="name">Nome:</label>
+							<input type="text" class="btForm" name="name" id="name" placeholder="Nome" required />
+						  </div>
+						  <div class="col-6 col-12-xsmall">
+							<label for="email">Email:</label>
+							<input type="email" name="email" id="email" placeholder="Email" required />
+						  </div>
+						  <div class="col-12">
+							<label for="subject">Assunto:</label>
+							<input type="text" name="subject" class="btForm" id="subject" placeholder="Assunto" required />
+						  </div>
+						  <div class="col-12">
+							<label for="message">Mensagem:</label>
+							<textarea name="message" id="message" placeholder="Mensagem" rows="6" required></textarea>
+						  </div>
+						  <div class="col-12">
+							<ul class="actions">
+							  <li>
+								<input type="submit" data-lang="send" class="btForm primary" value="Enviar Mensagem" />
+							  <li><input type="reset" data-lang="reset" class="btForm" value="Resetar Formulário" /></li>
+							</ul>
+						  </div>
+						  <div class="col-12">
+							<p id="my-form-status"></p>
+						  </div>
 						</div>
 					</form>
 				</div>
@@ -274,6 +290,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/language.js"></script>
+	<script src="assets/js/form.js"></script>
 
 </body>
 </html>
