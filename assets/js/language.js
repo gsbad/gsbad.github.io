@@ -44,7 +44,6 @@ const translations = {
         message: "Message",
         name: "Name",
         subject: "Subject"
-        // Adicione todas as traduções necessárias aqui
     },
     pt: {
         aboutMe: " Sobre mim",
@@ -61,13 +60,11 @@ const translations = {
         message: "Mensagem",
         name: "Nome",
         subject: "Assunto"
-        // Adicione todas as traduções necessárias aqui
     }
 };
 
 window.onload = () => {
-    // Definir o idioma padrão ao carregar a página
-    const defaultLanguage = 'pt'; // Defina aqui o idioma padrão
+    const defaultLanguage = 'en';
     changeLanguage(defaultLanguage);
     document.getElementById('lang-' + defaultLanguage).classList.add('selected');
 };
